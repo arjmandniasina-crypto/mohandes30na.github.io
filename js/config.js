@@ -16,13 +16,13 @@ let PJ=[
 let CONTACT=[{n:'Email',u:'mailto:you@example.com'},{n:'GitHub',u:'https://github.com/'},{n:'LinkedIn',u:'https://www.linkedin.com/'}];
 const T={
 en:{menu:['MY STORY','MY ACTIVITIES','PROJECTS & RESUME','EXPLORE THE ROOM'],desc:['The red book on the side table: how I got here.','A notebook of work and milestones.','Turn on the TV: projects, resume and contact.','Look around the whole room.'],
- title:'Build Your Own Website',ldesc:'Design and development, crafted with care.',back:'Back',dl:'Download Resume (PDF)',ach:'Achievement Unlocked: ',full:'Full Resume Unlocked!',egg:'Secret found! The fire roars.',hint:'Drag to look · scroll or WASD to walk · Esc to leave',
+ title:'Build Your Own Website',ldesc:'Design and development, crafted with care.',back:'Back',dl:'Download Resume (PDF)',ach:'Achievement Unlocked: ',full:'Full Resume Unlocked!',hint:'Drag to look · scroll or WASD to walk · Esc to leave',
  contact:'Contact',pj:['A short description of Alpha.','A short description of Beta.','A short description of Gamma.'],visit:'Visit',
  set:['Settings','Music','Volume','Quality','Reduce motion','Dark theme'],
  ch:[['Chapter A: Beginnings','Replace with your real story. Where you started, what sparked your curiosity.'],['Chapter B: Growth','The projects, mistakes and mentors that shaped your craft.'],['Chapter C: Today','What you do now and what you are looking for next.']],
  ac:[['2020','First milestone','Describe a job, course or project.'],['2022','Second milestone','Describe what you achieved.'],['2024','Third milestone','Describe where you are now.']]},
 fa:{menu:['داستان من','فعالیت‌های من','پروژه‌ها و رزومه','گشت در اتاق'],desc:['کتاب قرمز روی میز کناری؛ مسیر من.','دفترچه‌ای از کارها و تجربه‌ها.','تلویزیون را روشن کن: پروژه‌ها، رزومه و تماس.','کل اتاق را بگردید.'],
- title:'وب‌سایت خودت را بساز',ldesc:'طراحی و توسعه، با دقت و وسواس.',back:'بازگشت',dl:'دانلود رزومه (PDF)',ach:'دستاورد باز شد: ',full:'رزومه کامل باز شد!',egg:'رازی پیدا کردی! آتش شعله‌ور شد.',hint:'برای نگاه کردن بکشید · چرخ ماوس یا WASD برای حرکت · Esc برای خروج',
+ title:'وب‌سایت خودت را بساز',ldesc:'طراحی و توسعه، با دقت و وسواس.',back:'بازگشت',dl:'دانلود رزومه (PDF)',ach:'دستاورد باز شد: ',full:'رزومه کامل باز شد!',hint:'برای نگاه کردن بکشید · چرخ ماوس یا WASD برای حرکت · Esc برای خروج',
  contact:'تماس',pj:['توضیح کوتاه پروژه آلفا.','توضیح کوتاه پروژه بتا.','توضیح کوتاه پروژه گاما.'],visit:'مشاهده',
  set:['تنظیمات','موسیقی','صدا','کیفیت رندر','کاهش حرکت','تم تاریک'],
  ch:[['فصل ۱: آغاز','داستان واقعی خودت را اینجا بنویس؛ از کجا شروع کردی.'],['فصل ۲: رشد','پروژه‌ها، اشتباه‌ها و استادانی که تو را ساختند.'],['فصل ۳: امروز','الان چه می‌کنی و به دنبال چه هستی.']],
