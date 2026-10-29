@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>ویرایشگر محتوای پرتفولیو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/content-editor.css">
+</head>
+<body>
+<div class="ambient ambient-one" aria-hidden="true"></div>
+<div class="ambient ambient-two" aria-hidden="true"></div>
+<main class="shell">
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div>
+          <div class="eyebrow" data-i18n="eyebrow">PORTFOLIO / CONTENT STUDIO</div>
+          <h1 data-i18n="appTitle">ویرایشگر محتوای پرتفولیو</h1>
+        </div>
+      </div>
+      <div class="language-switch" role="group" aria-label="Interface language" data-i18n-aria="languageSwitchLabel">
+        <button type="button" class="language-option active" data-ui-lang="fa" aria-pressed="true">فارسی</button>
+        <button type="button" class="language-option" data-ui-lang="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <p class="hero-copy" data-i18n="heroCopy">داستان، فعالیت‌ها، پروژه‌ها و راه‌های تماس را از همین پنل ویرایش کن. لازم نیست کدهای سه‌بعدی یا استایل سایت را تغییر بدهی.</p>
+    <div class="hero-meta">
+      <span class="meta-chip"><span class="meta-dot"></span><span data-i18n="bilingualChip">محتوای فارسی و انگلیسی</span></span>
+      <span class="meta-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg><span data-i18n="localChip">ذخیره‌ی پیش‌نویس در همین مرورگر</span></span>
+    </div>
+    <div class="toolbar">
+      <button class="btn secondary" id="importBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg><span data-i18n="importButton">بارگذاری content.js فعلی</span></button>
+      <input id="importFile" type="file" accept=".js,.json,application/json,text/javascript" hidden>
+      <button class="btn secondary" id="downloadJson"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m-4-4 4 4 4-4M4 18v2h16v-2"/></svg><span data-i18n="backupButton">گرفتن نسخه‌ی پشتیبان JSON</span></button>
+      <button class="btn quiet" id="resetBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7v5h5M5.5 12a7 7 0 1 0 2-5"/></svg><span data-i18n="resetButton">بازگردانی نمونه‌ها</span></button>
+    </div>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+  </header>
+
+  <aside class="note">
+    <div class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v6m0-9h.01"/></svg></div>
+    <p data-i18n="noteCopy">مرورگر اجازه نمی‌دهد این ابزار فایل‌های پوشه‌ی پروژه را مستقیماً بازنویسی کند. پس از دانلود content.js، آن را در پوشه‌ی js قرار بده و فایل قبلی را جایگزین کن.</p>
+  </aside>
+
+  <form id="editorForm" autocomplete="off">
+    <section class="group">
+      <header class="group-header">
+        <div class="section-heading"><span class="section-index">01</span><div><h2 data-i18n="sectionProfile">معرفی شخصی و عنوان لپ‌تاپ</h2><p data-i18n="sectionProfileSub">هویت و پیام کوتاهی که در صحنه‌ی آغاز نمایش داده می‌شود.</p></div></div>
+        <span class="section-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span>
+      </header>
+      <div class="inside"><div class="grid">
+        <div class="field full"><label data-i18n="siteNameLabel">نام نمایشی سایت</label><input data-top="site.name" data-i18n-placeholder="siteNamePlaceholder" placeholder="مثلاً Sina Arjmandnia" dir="auto"></div>
+        <div class="field"><label data-i18n="headlineEnLabel">عنوان لپ‌تاپ — English</label><input data-top="site.headline.en" placeholder="Creative Developer & Designer" dir="ltr"></div>
+        <div class="field"><label data-i18n="headlineFaLabel">عنوان لپ‌تاپ — فارسی</label><input data-top="site.headline.fa" placeholder="طراح و توسعه‌دهنده‌ی خلاق" dir="rtl"></div>
+        <div class="field"><label data-i18n="taglineEnLabel">زیرعنوان لپ‌تاپ — English</label><input data-top="site.tagline.en" placeholder="I build thoughtful digital experiences." dir="ltr"></div>
+        <div class="field"><label data-i18n="taglineFaLabel">زیرعنوان لپ‌تاپ — فارسی</label><input data-top="site.tagline.fa" placeholder="تجربه‌های دیجیتال را با دقت می‌سازم." dir="rtl"></div>
+        <div class="field full"><label data-i18n="resumePathLabel">مسیر فایل رزومه PDF</label><input data-top="resumePath" placeholder="files/resume.pdf" dir="ltr"><span class="field-help" data-i18n="resumePathHelp">نام فایل باید با فایل واقعی داخل پوشه‌ی files مطابقت داشته باشد.</span></div>
+      </div></div>
+    </section>
+
+    <section class="group">
+      <header class="group-header"><div class="section-heading"><span class="section-index">02</span><div><h2 data-i18n="sectionStory">My Story — داستان من</h2><p data-i18n="sectionStorySub">هر فصل را به فارسی و انگلیسی بنویس؛ ترتیب فصل‌ها در کتاب حفظ می‌شود.</p></div></div><span class="section-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H20v18H7.5A3.5 3.5 0 0 0 4 23zM4 5.5V23M8 6h8M8 10h8"/></svg></span></header>
+      <div class="inside"><div id="chapters"></div></div>
+    </section>
+
+    <section class="group">
+      <header class="group-header"><div class="section-heading"><span class="section-index">03</span><div><h2 data-i18n="sectionActivities">My Activities — فعالیت‌ها</h2><p data-i18n="sectionActivitiesSub">دوره‌ها، تحصیلات، تجربه‌های کاری و دستاوردها را مدیریت کن.</p></div></div><button type="button" class="btn add-btn" id="addActivity"><span class="plus">+</span><span data-i18n="addActivity">افزودن فعالیت</span></button></header>
+      <div class="inside"><div id="activities"></div><p class="section-footnote" data-i18n="activitiesHelp">برای هر تجربه نسخه‌ی فارسی و انگلیسی جداگانه وجود دارد؛ می‌توانی هر تعداد مورد اضافه یا حذف کنی.</p></div>
+    </section>
+
+    <section class="group">
+      <header class="group-header"><div class="section-heading"><span class="section-index">04</span><div><h2 data-i18n="sectionProjects">Projects & Resume — پروژه‌ها</h2><p data-i18n="sectionProjectsSub">عنوان، توضیح، مهارت‌ها، لینک و تصویر هر پروژه را ویرایش کن.</p></div></div><button type="button" class="btn add-btn" id="addProject"><span class="plus">+</span><span data-i18n="addProject">افزودن پروژه</span></button></header>
+      <div class="inside"><div id="projects"></div><p class="section-footnote" data-i18n="projectsHelp">نمونه مسیر تصویر: images/projects/project-1.jpg. تصویر را با همین نام در پوشه‌ی پروژه قرار بده.</p></div>
+    </section>
+
+    <section class="group">
+      <header class="group-header"><div class="section-heading"><span class="section-index">05</span><div><h2 data-i18n="sectionContact">Contact — راه‌های ارتباطی</h2><p data-i18n="sectionContactSub">راه‌هایی که بازدیدکننده‌ها بتوانند با تو تماس بگیرند.</p></div></div><button type="button" class="btn add-btn" id="addContact"><span class="plus">+</span><span data-i18n="addContact">افزودن لینک تماس</span></button></header>
+      <div class="inside"><div id="contacts"></div></div>
+    </section>
+  </form>
+
+  <footer class="footer-actions">
+    <div class="footer-copy"><span class="footer-pulse"></span><div><strong data-i18n="readyTitle">آماده‌ی انتشار؟</strong><span data-i18n="readySub">محتوا را خروجی بگیر و در پروژه جایگزین کن.</span></div></div>
+    <div class="footer-buttons"><button class="btn primary" id="downloadJs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 17v3h14v-3"/></svg><span data-i18n="downloadContentButton">دانلود content.js برای سایت</span></button><button class="btn secondary" id="downloadJsonBottom" data-i18n="downloadJsonBottom">دانلود نسخه پشتیبان JSON</button></div>
+  </footer>
+  <p class="end-note" data-i18n="endNote">پیشنهاد: پیش از تغییرات بزرگ، یک نسخه‌ی پشتیبان JSON نگه دار.</p>
+</main>
+<script src="js/content-editor.js"></script>
+</body>
+</html>
