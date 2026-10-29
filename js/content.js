@@ -93,7 +93,7 @@ window.PORTFOLIO_CONTENT = {
         "Javascript",
         "Bootstrap"
       ],
-      "url": "#",
+      "url": "https://techziba.com/",
       "image": "images/projects/project-1.jpg",
       "colors": [
         "#ff7a59",
